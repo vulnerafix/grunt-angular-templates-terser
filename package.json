@@ -1,7 +1,7 @@
 {
-  "name": "grunt-angular-templates",
+  "name": "grunt-angular-templates-terser",
   "description": "Grunt build task to concatenate & register your AngularJS templates in the $templateCache",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/ericclemmons/grunt-angular-templates",
   "author": {
     "name": "Eric Clemmons",
@@ -28,7 +28,7 @@
     "test": "./node_modules/.bin/grunt"
   },
   "dependencies": {
-    "html-minifier": "~4.0.0"
+    "html-minifier-terser": "~7.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.0",
