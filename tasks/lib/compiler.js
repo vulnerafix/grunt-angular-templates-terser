@@ -8,7 +8,7 @@
 
 'use strict';
 
-var minify  = require('html-minifier').minify;
+var minify  = require('html-minifier-terser').minify;
 var Url     = require('url');
 
 /**
