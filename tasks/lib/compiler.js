@@ -8,7 +8,7 @@
 
 'use strict';
 
-var   = require('html-minifier-terser').;
+var minify  = require('html-minifier').minify;
 var Url     = require('url');
 
 /**
@@ -75,7 +75,7 @@ var Compiler = function(grunt, options, cwd, expanded) {
 
     script += paths
       .map(this.load)
-      .map(this.)
+      .map(this.minify)
       .map(function(source, i) {
         return this.customize(source, paths[i]);
       }.bind(this))
@@ -118,11 +118,11 @@ var Compiler = function(grunt, options, cwd, expanded) {
    * @param  {String} source  Template source
    * @return {String}         Minified template
    */
-  this. = function(source) {
+  this.minify = function(source) {
     if (options.htmlmin && Object.keys(options.htmlmin).length) {
       try {
-        grunt.verbose.writeln('ing file: ' +source);
-        source = (source, options.htmlmin);
+        grunt.verbose.writeln('Minifying file: ' +source);
+        source = minify(source, options.htmlmin);
       } catch (err) {
         grunt.log.error(err + '\n\n' + source + '\n\n');
       }
